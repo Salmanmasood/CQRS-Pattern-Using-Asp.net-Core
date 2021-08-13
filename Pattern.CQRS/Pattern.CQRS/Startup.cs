@@ -9,6 +9,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Pattern.CQRS.Data;
+using Pattern.CQRS.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +31,7 @@ namespace Pattern.CQRS
         {
             services.AddDbContext<FootballDbContext>(options =>
         options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddScoped<IPlayersService, PlayersService>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
