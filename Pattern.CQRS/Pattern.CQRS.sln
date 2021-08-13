@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.35
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pattern.CQRS", "Pattern.CQRS\Pattern.CQRS.csproj", "{A6248404-9B02-4F59-A968-790CEAB0F95C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6248404-9B02-4F59-A968-790CEAB0F95C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6248404-9B02-4F59-A968-790CEAB0F95C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6248404-9B02-4F59-A968-790CEAB0F95C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6248404-9B02-4F59-A968-790CEAB0F95C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14AFED16-6EAE-406A-8FE7-C96FBE01A1F6}
+	EndGlobalSection
+EndGlobal
