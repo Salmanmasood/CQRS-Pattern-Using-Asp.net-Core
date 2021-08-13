@@ -1,3 +1,4 @@
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -13,6 +14,7 @@ using Pattern.CQRS.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace Pattern.CQRS
@@ -32,6 +34,7 @@ namespace Pattern.CQRS
             services.AddDbContext<FootballDbContext>(options =>
         options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<IPlayersService, PlayersService>();
+            services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
