@@ -21,6 +21,7 @@ namespace Pattern.CQRS
 {
     public class Startup
     {
+        private readonly string _title = "Pattern.CQRS";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -38,7 +39,7 @@ namespace Pattern.CQRS
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Pattern.CQRS", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = _title, Version = "v1" });
             });
         }
 
