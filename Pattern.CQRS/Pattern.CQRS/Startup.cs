@@ -22,6 +22,7 @@ namespace Pattern.CQRS
     public class Startup
     {
         private readonly string _title = "Pattern.CQRS";
+        private readonly string _connectionKey= "DatabaseConnection";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -33,7 +34,7 @@ namespace Pattern.CQRS
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<FootballDbContext>(options =>
-        options.UseSqlServer(Configuration.GetConnectionString("DatabaseConnection")));
+        options.UseSqlServer(Configuration.GetConnectionString(_connectionKey)));
             services.AddScoped<IPlayersService, PlayersService>();
             services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddControllers();
