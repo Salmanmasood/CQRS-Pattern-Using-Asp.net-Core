@@ -33,7 +33,7 @@ namespace Pattern.CQRS
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<FootballDbContext>(options =>
-        options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+        options.UseSqlServer(Configuration.GetConnectionString("DatabaseConnection")));
             services.AddScoped<IPlayersService, PlayersService>();
             services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddControllers();
