@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Pattern.CQRS.Constants;
 using Pattern.CQRS.Data;
 using Pattern.CQRS.Services;
 using System;
@@ -34,7 +35,7 @@ namespace Pattern.CQRS
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<FootballDbContext>(options =>
-        options.UseSqlServer(Configuration.GetConnectionString(_connectionKey)));
+        options.UseSqlServer(Configuration.GetConnectionString(Constant.DatabaseConnectionString)));
             services.AddScoped<IPlayersService, PlayersService>();
             services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddControllers();
